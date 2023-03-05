@@ -10,7 +10,9 @@ export default function Intro() {
     <h1>Hi, I'm Zachary.</h1>
     <br />
     <p>A Frontend Developer based in Trinidad & Tobago</p>
-    <p>Let's build your future together</p>
+    <p>Let's build the future together</p>
+    <br />
+    <p>ramsumairzachary@gmail.com</p>
     <div className="mainSkills">
       <ul>
         <li className="mainSkill">
