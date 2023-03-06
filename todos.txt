@@ -11,3 +11,6 @@ https://www.youtube.com/watch?v=Et5tDPoU03c
 
 
 learn about css modules
+
+
+add flaticon
