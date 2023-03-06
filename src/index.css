@@ -15,6 +15,11 @@ html {
 	text-align: center;
 } */
 
+
+body{
+	overflow-x: hidden;
+}
+
 .App {
 	width: 100vw;
 	background-color: #1f1f21;
@@ -291,6 +296,11 @@ footer {
 	.footer-copyright {
 		font-size: 1rem;
 	}
+
+	.intro > p {
+		text-align: center;
+		width: 60%;
+	}
 }
 
 
@@ -301,4 +311,49 @@ footer {
 		font-size: 2.5rem;
 		text-transform: uppercase;
 	}
+
+	.intro > h1{
+		font-size: 2rem;
+		width: 90%;
+
+	}
+
+	
+	.intro > p {
+		text-align: center;
+		font-size: 1.5rem;
+		width: 90%;
+	}
+
+	.mainSkills > ul {
+		margin: 2em 0;
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 2em;
+	}
 }
+
+
+
+@media screen and (max-height: 680px) {
+.intro{
+	/* padding-top: 4em; */
+	padding: 22em 0;
+}
+}
+
+
+@media screen and (max-width: 300px) {
+	.intro > h1{
+		font-size: 1,5rem;
+		width: 90%;
+
+	}
+
+	
+	.intro > p {
+		text-align: center;
+		font-size: 1.3rem;
+		width: 90%;
+	}
+	}
