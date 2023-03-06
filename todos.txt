@@ -1,0 +1,13 @@
+add on scroll animations using framer motion
+https://www.youtube.com/watch?v=4TitONV7sz8
+https://www.youtube.com/watch?v=hkhskSrT5SY (when in view video)
+
+add navlinks with smooth scroll 
+https://youtu.be/0o_JVcSKxRA?t=6063 
+
+
+add hamburger 
+https://www.youtube.com/watch?v=Et5tDPoU03c
+
+
+learn about css modules
