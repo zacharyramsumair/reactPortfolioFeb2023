@@ -6,6 +6,8 @@ add navlinks with smooth scroll
 https://youtu.be/0o_JVcSKxRA?t=6063 
 
 
+
+fix nabbar on mobile and desktop
 add hamburger 
 https://www.youtube.com/watch?v=Et5tDPoU03c
 

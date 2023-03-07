@@ -10,7 +10,9 @@ import { useEffect } from "react";
 
 export default function Intro(props) {
 
-  const { ref, inView } = useInView();
+  const { ref, inView } = useInView({
+	threshold: 0.1,
+  });
 
   useEffect(()=>{
     if(inView){
@@ -39,7 +41,7 @@ export default function Intro(props) {
 	};
 
 	return (
-		<section className="intro" ref={ref} id="intro">
+		<section className="intro" ref={ref} >
 			<motion.h1
 				initial={{ y: "2em", opacity: 0 }}
 				animate={{ y: 0, opacity: 1 }}

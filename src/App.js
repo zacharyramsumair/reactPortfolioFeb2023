@@ -16,6 +16,7 @@ export default function App() {
   return (
     <div className="App">
       <Navbar introShown={introShown}/>
+      <br id="intro"/>
       <Intro setIntroShown={setIntroShown} />
       <br id="featured"/>
       <Featured/>
