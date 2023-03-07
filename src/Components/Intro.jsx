@@ -69,6 +69,9 @@ export default function Intro(props) {
 				initial={{ x: "100vw", opacity: 0 }}
 				animate={{ x: 0, opacity: 1 }}
 				transition={{ duration: 0.5, delay: 1.3 }}
+				onClick={()=>navigator.clipboard.writeText("ramsumairzachary@gmail.com")}
+				className="email"
+				title="Click to copy to clipboard"
 			>
 				ramsumairzachary@gmail.com
 			</motion.p>

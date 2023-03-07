@@ -133,6 +133,10 @@ border-bottom: 3px solid #a38cee ;
 	width: 70%;
 }
 
+.email{
+	cursor: pointer;
+}
+
 .mainSkills > ul {
 	margin: 3em 0;
 	display: grid;
