@@ -3,8 +3,24 @@ import javascript from "../assets/javascript.png";
 import jquery from "../assets/jquery.png";
 import react from "../assets/react.png";
 import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+import { useEffect } from "react";
 
-export default function Intro() {
+
+
+export default function Intro(props) {
+
+  const { ref, inView } = useInView();
+
+  useEffect(()=>{
+    if(inView){
+      props.setIntroShown(true)
+    } else {
+      props.setIntroShown(false)
+    }
+  }, [inView,props])
+
+
 	const container = {
 		hidden: { opacity: 0 },
 		show: {
@@ -23,7 +39,7 @@ export default function Intro() {
 	};
 
 	return (
-		<section className="intro">
+		<section className="intro" ref={ref} id="intro">
 			<motion.h1
 				initial={{ y: "2em", opacity: 0 }}
 				animate={{ y: 0, opacity: 1 }}

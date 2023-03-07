@@ -5,11 +5,18 @@ import Recent from "./Components/Recent"
 import Skills from "./Components/Skills"
 import Footer from "./Components/Footer"
 
+import {  useState } from "react";
+
+
 export default function App() {
+
+  let [introShown , setIntroShown] = useState(true)
+  console.log("is the intro shown " , introShown)
+
   return (
     <div className="App">
-      <Navbar/>
-      <Intro/>
+      <Navbar introShown={introShown}/>
+      <Intro setIntroShown={setIntroShown} />
       <Featured/>
       <Recent/>
       <Skills/>

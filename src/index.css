@@ -33,18 +33,32 @@ body{
 	color: #a38cee;
 }
 
-.clearNav {
-	background: transparent;
+.clearNav, .coloredNav {
 	/* background: rgba(31, 31, 33, 0.3); */
 	position: fixed;
 	width: 100vw;
-	backdrop-filter: blur(7px);
+	
 	display: flex;
 	align-items: center;
 	height: 4em;
 	padding: 0em 2em;
 	font-size: 1.5rem;
+	z-index: 100;
 	/* border-radius: 70px; */
+}
+
+.clearNav{
+	background: transparent;
+	backdrop-filter: blur(7px);
+
+}
+
+.coloredNav{
+	background: #000;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
 }
 
 .intro {
@@ -90,6 +104,9 @@ body{
 	height: 7em;
 	padding: 1.5em;
 }
+
+
+
 
 .featured,
 .recent {
@@ -356,4 +373,10 @@ footer {
 		font-size: 1.3rem;
 		width: 90%;
 	}
+	}
+
+
+
+	.featuredSection{
+		padding-top: 3em;
 	}

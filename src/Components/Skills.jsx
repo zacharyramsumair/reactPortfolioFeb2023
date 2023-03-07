@@ -1,4 +1,8 @@
-import Skill from "./Skill"
+import { useEffect, useState } from "react";
+import { useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+import Skill from "./Skill";
+
 
 import html from "../assets/html.png"
 import bootstrap from "../assets/bootstrap.png"
@@ -18,36 +22,77 @@ import devTools from "../assets/devTools.png"
 import gsap from "../assets/gsap.png"
 
 
+
+
 export default function Skills() {
-    return (
-      <section className="skillsSection">
-    
+
+  const { ref, inView } = useInView({
+    threshold: 0.2, // adjust this value as needed
+  });
+
+  let [rendered , setRendered] = useState(false)
+
+  const animation = useAnimation();
+
+    useEffect(() => {
+    if (inView) {
+      setRendered(true)
+      animation.start(() => ({
+        opacity: 1,
+        transition: { duration: 0.4 },
+      }));
+    } else if(!inView && rendered===false) {
+      animation.start(() => ({ opacity: 0 }));
+    }
+  }, [inView,animation,rendered]);
+
+  
+
+
+  const skills = [
+    {image:html,  name:"HTML5"},
+     {image:bootstrap,  name:"Bootstrap"},
+     {image:flask,  name:"Flask"},
+     {image:git,  name:"Git"},
+     {image:javascript,  name:"Javascript"},
+     {image:jquery,  name:"jQuery"},
+     {image:mongodb,  name:"MongoDB"},
+     {image:node,  name:"Node JS"},
+     {image:responsive,  name:"Responsive Design"},
+     {image:devTools,  name:"Developer Tools"},
+     {image:python,  name:"Python"},
+     {image:react,  name:"React"},
+     {image:sass,  name:"SASS/SCSS"},
+     {image:sqllite,  name:"SQL lite"},
+     {image:tailwind,  name:"Tailwind CSS"},
+     {image:gsap , name:"GSAP"},
+  ];
+
+
+  
+  
+  return (
+    <section className="skillsSection" id="skills">
       <h2 className="section-header">Skills Acquired</h2>
-      <div className="skillsGrid">
-     <Skill image={html} name="HTML5"/>
-     <Skill image={bootstrap} name="Bootstrap"/>
-     <Skill image={flask} name="Flask"/>
-     <Skill image={git} name="Git"/>
-     <Skill image={javascript} name="Javascript"/>
-     <Skill image={jquery} name="jQuery"/>
-     <Skill image={mongodb} name="MongoDB"/>
-     <Skill image={node} name="Node JS"/>
-     <Skill image={responsive} name="Responsive Design"/>
-     <Skill image={devTools} name="Developer Tools"/>
-     <Skill image={python} name="Python"/>
-     <Skill image={react} name="React"/>
-     <Skill image={sass} name="SASS/SCSS"/>
-     <Skill image={sqllite} name="SQL lite"/>
-     <Skill image={tailwind} name="Tailwind CSS"/>
-     <Skill image={gsap} name="GSAP"/>
- 
+      <div className="skillsGrid" ref={ref}>
+        {skills.map((skill, index) => (
+          <Skill
+            key={skill.name}
+            image={skill.image}
+            name={skill.name}
+            custom={index}
+            
+            animate={{
+              opacity: 1,
+              transition: { duration: 0.4 },
+            }}
+            inView={inView}
+            initial={{ opacity: 0 }}
 
-
-     {/* bootstrap, tailwind, react css, havascript, python,jquery sass, scss, git, express, node, mongo, flask, sql , mysql, sqlite*/}
-
+            index={index}
+          />
+        ))}
       </div>
-      </section>
-    );
-  }
-  
-  
+    </section>
+  );
+}

@@ -24,7 +24,7 @@ export default function Project(props) {
 	const animation = useAnimation();
 
 	useEffect(() => {
-		console.log("use effect hook, inView = ", inView);
+		// console.log("use effect hook, inView = ", inView);
 		if (inView) {
 			setRendered(true)
 			animation.start({
@@ -35,7 +35,7 @@ export default function Project(props) {
 					duration: 0.8,
 					bounce: 0.25,
 					ease: "easeOut",
-					delay:0.1
+					// delay:0.1
 				},
 			});
 		}
