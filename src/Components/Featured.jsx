@@ -8,11 +8,11 @@ import rockPaperScissors from "../assets/rockPaperScissors.png";
 
 
 export default function Featured() {
+	
 	return (
 		<section className="featuredSection">
 			<h2 className="section-header"> Featured Projects</h2>
-			<div className="featured">
-				
+			<div className="featured" >
 				<Project
 					title="Trivia Quiz (Quizzical)"
 					image={quizzicalImage}
@@ -37,7 +37,6 @@ export default function Featured() {
 					link="https://galleriatry3.onrender.com"
 				/>
 
-	
 				<Project
 					title="Etch-a-Sketch"
 					image={etchASketch}
@@ -46,7 +45,6 @@ export default function Featured() {
 					link="https://zacharyramsumair.github.io/Odin-Etch-a-Sketch/"
 				/>
 
-	
 				<Project
 					title="Man VS AI (Rock Paper Scissors)"
 					image={rockPaperScissors}
@@ -54,10 +52,6 @@ export default function Featured() {
 					description="Save the world from destruction by defeating the  AI Bot in a game of Rock Paper Scissors (first to 5)"
 					link="https://zacharyramsumair.github.io/odin-rockPaperScissors/"
 				/>
-
-
-
-
 			</div>
 			<hr />
 		</section>
