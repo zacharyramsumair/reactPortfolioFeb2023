@@ -11,10 +11,27 @@ export default function Navbar(props) {
 
 	return (
 		<nav  className={styles} >
-		{/* <nav  className="clearNav" > */}
+		{/* <nav  className={styles} > */}
 			<div className="brand">
 				<span className="purple-highlight">Z</span>achary
 				<span className="purple-highlight"> R</span>amsumair
+			</div>
+
+			<div>
+				<ul>
+					<li>
+						<a href="/#intro">Intro</a>
+					</li>
+					<li>
+						<a href="/#featured">Featured</a>
+					</li>
+					<li>
+						<a href="/#recent">Recent</a>
+					</li>
+					<li>
+						<a href="/#skills">Skills</a>
+					</li>
+				</ul>
 			</div>
 		</nav>
 	);

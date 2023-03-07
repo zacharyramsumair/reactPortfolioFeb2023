@@ -17,8 +17,11 @@ export default function App() {
     <div className="App">
       <Navbar introShown={introShown}/>
       <Intro setIntroShown={setIntroShown} />
+      <br id="featured"/>
       <Featured/>
+      <br id="recent"/>
       <Recent/>
+      <br  id="skills"/>
       <Skills/>
       <Footer/>
     </div>

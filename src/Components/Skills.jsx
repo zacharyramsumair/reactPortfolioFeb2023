@@ -72,7 +72,7 @@ export default function Skills() {
   
   
   return (
-    <section className="skillsSection" id="skills">
+    <section className="skillsSection">
       <h2 className="section-header">Skills Acquired</h2>
       <div className="skillsGrid" ref={ref}>
         {skills.map((skill, index) => (

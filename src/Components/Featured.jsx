@@ -10,7 +10,7 @@ import rockPaperScissors from "../assets/rockPaperScissors.png";
 export default function Featured() {
 	
 	return (
-		<section className="featuredSection" id="featured">
+		<section className="featuredSection" >
 			<h2 className="section-header"> Featured Projects</h2>
 			<div className="featured" >
 				<Project

@@ -160,7 +160,7 @@ export default function Recent() {
 
 
 	return (
-		<section className="RecentSection" id="recent"> 
+		<section className="RecentSection" > 
 			<h2 className="section-header"> Recent Projects</h2>
 			<div className="recent">
 			{allProjects.slice(0, recentShown)}
