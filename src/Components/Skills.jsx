@@ -66,6 +66,7 @@ export default function Skills() {
      {image:sqllite,  name:"SQL lite"},
      {image:tailwind,  name:"Tailwind CSS"},
      {image:gsap , name:"GSAP"},
+    //  add framer motion
   ];
 
 
