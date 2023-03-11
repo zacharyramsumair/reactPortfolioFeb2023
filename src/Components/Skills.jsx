@@ -67,6 +67,7 @@ export default function Skills() {
      {image:tailwind,  name:"Tailwind CSS"},
      {image:gsap , name:"GSAP"},
     //  add framer motion
+    // axios
   ];
 
 

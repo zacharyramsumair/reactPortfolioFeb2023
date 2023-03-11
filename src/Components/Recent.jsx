@@ -16,6 +16,8 @@ import singlePageDesignPortfolio from "../assets/singlePageDesignPortfolio.png";
 import skilledLearningPage from "../assets/skilledLearningPage.png";
 import travelJournal from "../assets/travelJournal.png";
 import calculator from "../assets/calculator.png";
+import fetchAxiosQuotes from "../assets/fetchAxiosQuotes.png"
+import uselessFact from "../assets/uselessFact.png"
 
 
 
@@ -29,6 +31,22 @@ export default function Recent() {
 	}
 
 	let allProjects = [
+		<Project
+			title="React Axios API Facts"
+			key="React Axios API Facts"
+			image={uselessFact}
+			technologies={["Axios", "React"]}
+			description="Learning how to use Axios in React"
+			link="React Axios API Facts"
+		/>,
+		<Project
+			title="Using APIs with Fetch and Axios"
+			key="Using APIs with Fetch and Axios"
+			image={fetchAxiosQuotes}
+			technologies={["Axios", "Fetch"]}
+			description="Practising using axios and fetch to use an API to get random Quotes."
+			link="https://zacharyramsumair.github.io/vanillaAPI-Fetch-Axios/fetch.html"
+		/>,
 		<Project
 			title="Calculator"
 			key="Calculator"
