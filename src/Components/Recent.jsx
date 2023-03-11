@@ -1,18 +1,3 @@
-// import React , {useEffect} from "react"
-// import AOS from 'aos'
-// import 'aos/dist/aos.css'
-
-// export default function Recent() {
-//   useEffect(() => {
-//     AOS.init({duration:1000});
-//   }, [])
-//     return (
-//       <div className="recent" data-aos="fade-up">
-//     Recent
-//       </div>
-//     );
-//   }
-
 import { useState } from "react";
 
 import Project from "./Project";
@@ -30,6 +15,7 @@ import rockPaperScissors from "../assets/rockPaperScissors.png";
 import singlePageDesignPortfolio from "../assets/singlePageDesignPortfolio.png";
 import skilledLearningPage from "../assets/skilledLearningPage.png";
 import travelJournal from "../assets/travelJournal.png";
+import calculator from "../assets/calculator.png";
 
 
 
@@ -43,6 +29,14 @@ export default function Recent() {
 	}
 
 	let allProjects = [
+		<Project
+			title="Calculator"
+			key="Calculator"
+			image={calculator}
+			technologies={["HTML", "CSS", "Javascript"]}
+			description="Calculator web app using Math.js. Utilizes buttons and keyboard controls."
+			link="https://zacharyramsumair.github.io/odinCalculator/"
+		/>,
 		<Project
 			title="Man VS AI (Rock Paper Scissors)"
 			key="Man VS AI (Rock Paper Scissors)"
