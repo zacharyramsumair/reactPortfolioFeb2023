@@ -62,7 +62,7 @@ export default function Intro(props) {
 				animate={{ y: 0, opacity: 1 }}
 				transition={{ duration: 0.3, delay: 1 }}
 			>
-				Let's build the future together
+				Follow as I document my Web Dev Journey
 			</motion.p>
 			<br />
 			<motion.p
